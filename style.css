@@ -1,0 +1,13 @@
+.body {
+    border: 1px solid red;
+    height: 99vh;
+    width: 110vw;
+    padding-left: -10vw;
+}
+
+#box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid skyblue;
+    background-color: rgb(186, 236, 236);
+}
