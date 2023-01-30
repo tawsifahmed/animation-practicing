@@ -1,29 +1,27 @@
 .body {
     border: 1px solid none;
     height: 100vh;
-    width: 110vw;
-    padding-left: -10vw;
+    width: 100vw;
     position: absolute;
-    /* top: 0;
+    top: 0;
     left: 0;
     bottom: 0;
-    right: 0; */
+    right: 0;
 }
 
-.animate {
+.box {
     height: 100px;
     width: 100px;
-    border: 1px solid skyblue;
-    background-color: rgb(186, 236, 236);
+    border: 5px solid rgb(220, 20, 60);
+    background-color: rgb(59, 161, 59);
     position: relative;
     display: inline-block;
-    animation: DVD 5s infinite alternate;
-    left: 0px;
+    animation: box 5s infinite alternate;
+    left: 100px;
     top: 0px;
-
 }
 
-@keyframes DVD {
+@keyframes box {
     0% {
         top: 0vh;
         left: 0%;

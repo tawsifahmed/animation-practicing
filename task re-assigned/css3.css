@@ -13,3 +13,11 @@
     position: absolute;
     transform: rotate();
 }
+
+#right {
+    /* innerHTML: &larr; */
+    position: absolute;
+    left: 50px;
+    top: 25px;
+
+}
