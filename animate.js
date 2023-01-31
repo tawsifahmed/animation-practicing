@@ -49,7 +49,7 @@ function startBox() {
 
 
         downArrow.style.top = (pTop + 90 * direction) + "px";
-        downArrow.style.left = (pLeft + 133 * direction) + "px";
+        downArrow.style.left = (pLeft + 100 * direction) + "px";
         if (direction === 1) {
             downArrow.style.transform = 'rotate(0deg)';
 

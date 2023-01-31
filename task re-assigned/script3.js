@@ -26,16 +26,14 @@ function startBox() {
     rightArrow.style.top = "25px";
     body.appendChild(rightArrow);
 
+    setTimeout(() => {
+        rightArrow.remove()
+    }, 5000)
 
-    rightArrow.style.top = (pTop + 20 * direction) + "px";
-    rightArrow.style.left = (pLeft + 120 * direction) + "px"
 
-    // console.log(pTop);
-    // let rLeft = rightArrow.style.left;
-    // let rTop = rightArrow.style.top;
-    // console.log(rLeft)
+    rightArrow.style.top = (pTop + 21 * direction) + "px";
+    rightArrow.style.left = (pLeft + 79 * direction) + "px"
 
-    // console.log(rTop)
 
 
     setTimeout(() => {
@@ -47,18 +45,35 @@ function startBox() {
         downArrow.style.top = "60px";
         body.appendChild(downArrow);
 
+        setTimeout(() => {
+            downArrow.remove()
+        }, 5000)
 
-        downArrow.style.top = (pTop + 90 * direction) + "px";
+
+        downArrow.style.top = (pTop + 40 * direction) + "px";
         downArrow.style.left = (pLeft + 85 * direction) + "px";
         if (direction === 1) {
             downArrow.style.transform = 'rotate(0deg)';
 
         }
         else {
-            downArrow.style.transform = 'rotate(-180deg)';
+            const upArrow = document.createElement("div");
+            upArrow.innerHTML = "&uarr;";
+            upArrow.style.position = "absolute";
+            upArrow.style.left = "25px";
+            upArrow.style.top = "-25px";
+            upArrow.style.color = 'blue'
+            body.appendChild(upArrow);
+            setTimeout(() => {
+                upArrow.remove()
+            }, 5000)
+
+            upArrow.style.top = (pTop + 30 * direction) + "px";
+            upArrow.style.left = (pLeft + 44 * direction) + "px"
+            downArrow.style.visibility = 'hidden';
 
         }
-    }, 500)
+    }, 450)
 
 
     // 145
@@ -78,13 +93,27 @@ function startBox() {
 
     }
     else {
-        rightArrow.style.transform = 'rotate(-180deg)';
-    }
+        const leftArrow = document.createElement("div");
+        leftArrow.innerHTML = "&larr;";
+        leftArrow.style.position = "absolute";
+        leftArrow.style.left = "-25px";
+        leftArrow.style.top = "25px";
+        leftArrow.style.color = 'red'
+        body.appendChild(leftArrow);
 
+        setTimeout(() => {
+            leftArrow.remove()
+        }, 5000)
+
+        leftArrow.style.top = (pTop + 1 * direction) + "px";
+        leftArrow.style.left = (pLeft + 38 * direction) + "px";
+        rightArrow.style.visibility = 'hidden'
+    }
+    console.log(pLeft, pTop);
 
 
 }
 
 
-setInterval(startBox, 1000);
+setInterval(startBox, 900);
 

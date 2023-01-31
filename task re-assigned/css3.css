@@ -1,5 +1,5 @@
 #body {
-    border: 1px solid red;
+    border: 1px solid none;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -12,12 +12,4 @@
     background-color: green;
     position: absolute;
     transform: rotate();
-}
-
-#right {
-    /* innerHTML: &larr; */
-    position: absolute;
-    left: 50px;
-    top: 25px;
-
 }
